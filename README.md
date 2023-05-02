@@ -1,2 +1,3 @@
 # Booking-app
-This is a current web development project using MERN stack. api contains the api calls and client contains reactjs frontend
+This is a current in development web project using MERN stack. This project is an attempt to copy some features of Booking.com
+api folder contains the api calls and REST operations and client contains reactjs frontend

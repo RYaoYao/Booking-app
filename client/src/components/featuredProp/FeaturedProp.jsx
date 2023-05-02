@@ -16,7 +16,7 @@ const FeaturedProp = () => {
         </div>
         <div className="fpItem">
             <img src="https://cf.bstatic.com/xdata/images/hotel/square600/87428762.webp?k=9a065fcd92168145d8c8358701662c76793535597b678efc8f6921c8e3c188e6&o=&s=1" alt="7seasons" className="fpImg" />
-            <span className="fpName">7Seasons Apartments Budapest</span>
+            <span className="fpName">7Seasons Apartments</span>
             <span className="fpCity">06, Hungary, Budapest</span>
             <span className="fpPrice">Starting from P 9,277</span>
             <div className='fpRating'>

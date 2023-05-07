@@ -6,6 +6,7 @@ import userRoute from "./routes/users.js"
 import hotelRoute from "./routes/hotels.js"
 import roomRoute from "./routes/rooms.js"
 import cookieParser from "cookie-parser"
+import cors from "cors"
 const app = express()
 dotenv.config()
 
@@ -31,9 +32,9 @@ mongoose.connection.on("connected", ()=> {
 app.use(express.json())
 app.use(cookieParser())
 app.use("/api/auth",authRoute)
-app.use("/api/users",userRoute)
-app.use("/api/hotels",hotelRoute)
-app.use("/api/rooms",roomRoute)
+app.use("/api/users",cors,userRoute)
+app.use("/api/hotels",cors(),hotelRoute)
+app.use("/api/rooms",cors(),roomRoute)
 
 app.use((err,req,res,next)=>{
     const errorStatus = err.status || 500

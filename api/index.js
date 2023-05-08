@@ -31,14 +31,15 @@ mongoose.connection.on("connected", ()=> {
 //middlewares
 app.use(express.json())
 app.use(cookieParser())
-app.use("/api/auth",authRoute)
-app.use("/api/users",cors,userRoute)
+app.use("/api/auth",cors(),authRoute)
+app.use("/api/users",cors(),userRoute)
 app.use("/api/hotels",cors(),hotelRoute)
 app.use("/api/rooms",cors(),roomRoute)
 
 app.use((err,req,res,next)=>{
-    const errorStatus = err.status || 500
-    const errorMessage = err.errorMessage || "Something went wrong"
+    const errorStatus = err.status || 500;
+    const errorMessage = err.message || "Something went wrong";
+    
     return res.status(errorStatus).json({
         success: false,
         status: errorStatus,
